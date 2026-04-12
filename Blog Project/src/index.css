@@ -1,1 +1,11 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@plugin "daisyui" {
+  themes: false;
+  root: ":root";
+  include: ;
+  exclude: ;
+  prefix: ;
+  logs: true;
+}
+
+.root {   isolation: isolate; }

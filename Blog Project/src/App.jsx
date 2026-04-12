@@ -1,12 +1,16 @@
-import './App.css'
+import { BrowserRouter } from "react-router";
+import Navbar from "./components/layout/Navbar";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
-
   return (
-<>
-<h1>Welcome to Vite</h1>
-</>
-  )
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <AppRoutes />
+      </BrowserRouter>
+    </>
+  );
 }
 
-export default App
+export default App;
