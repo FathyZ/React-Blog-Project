@@ -1,10 +1,15 @@
 import { Route, Routes } from "react-router";
-import LoginForm from "../components/ui/LoginForm";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import AddPost from "../pages/AddPost";
+import Home from "../pages/Home";
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<h1>Home</h1>} />
-      <Route path="/login" element={<LoginForm />}></Route>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/add-post" element={<AddPost />} />
     </Routes>
   );
 }
