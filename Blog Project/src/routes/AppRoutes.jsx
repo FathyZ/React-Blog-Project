@@ -9,7 +9,7 @@ function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/add-post" element={<AddPost />} />
+      <Route path="/edit-post/:id?" element={<AddPost />} />
     </Routes>
   );
 }

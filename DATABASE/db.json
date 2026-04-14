@@ -5,26 +5,32 @@
       "password": "$2a$10$7JVzmbZwDkc22UJe16Q.Iu6/JgofYR5IpU4XzcUuQJ9ranYDQ0doG",
       "username": "FathyZ",
       "id": 1
+    },
+    {
+      "email": "Mahmoud@gmail.com",
+      "password": "$2a$10$66Wd.KKcAuUyBY8s5r2UhO8N6I9ckyXHCn1VXtwFlXvgP7eCPE6jK",
+      "username": "Mahmoud",
+      "id": 2
     }
   ],
   "posts": [
     {
-      "title": "Test#01",
-      "content": "This is The First Post in the blog !!\n",
-      "imageUrl": "https://466xu6em55.ucarecd.net/c688b57f-6fbb-4886-8b2a-c6c13cf7427f/",
-      "userId": 1,
-      "author": "FathyZ",
-      "createdAt": "2026-04-12T22:10:53.502Z",
-      "id": 1
-    },
-    {
       "title": "Testing the react toasts",
-      "content": "Will The Toast Work??",
+      "content": "Toasts Will work...?",
       "imageUrl": "https://466xu6em55.ucarecd.net/905657aa-04c8-4e9a-a2f8-d476c571d527/",
       "userId": 1,
       "author": "FathyZ",
       "createdAt": "2026-04-12T22:23:08.808Z",
       "id": 2
+    },
+    {
+      "title": "does my api work?",
+      "content": "IT WORKED !!!! This is an edited post content",
+      "imageUrl": "https://466xu6em55.ucarecd.net/b349a496-7a3a-43fc-bca9-389246650e27/",
+      "userId": 1,
+      "author": "FathyZ",
+      "createdAt": "2026-04-14T17:43:52.121Z",
+      "id": 3
     }
   ]
 }

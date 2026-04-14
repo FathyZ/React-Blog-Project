@@ -1,8 +1,10 @@
-const PostCard = ({ post, onDelete, onEdit, currentUserId }) => {
+import { Link } from "react-router";
+
+const PostCard = ({ post, onDelete, currentUserId }) => {
   const isOwner = post.userId === currentUserId;
 
   return (
-    <article className="flex flex-col h-full border-t-2 border-black pt-6">
+    <div className="flex flex-col h-full border-t-2 border-black pt-6">
       <div className="aspect-16/10 overflow-hidden bg-gray-100 mb-6">
         {post.imageUrl ? (
           <img
@@ -18,18 +20,19 @@ const PostCard = ({ post, onDelete, onEdit, currentUserId }) => {
       </div>
 
       <div className="flex justify-between items-start mb-4">
-        <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-gray-400">
-          {post.author} <br /> {new Date(post.createdAt).toLocaleDateString()}
+        <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-gray-600">
+          Author : {post.author} <br />{" "}
+          {new Date(post.createdAt).toLocaleDateString()}
         </span>
 
         {isOwner && (
           <div className="flex gap-3">
-            <button
-              onClick={() => onEdit(post.id)}
+            <Link
+              to={`/edit-post/${post.id}`}
               className="text-[10px] cursor-pointer font-bold uppercase hover:underline"
             >
               Edit
-            </button>
+            </Link>
             <button
               onClick={() => {
                 if (window.confirm("Delete?")) onDelete(post.id);
@@ -51,13 +54,7 @@ const PostCard = ({ post, onDelete, onEdit, currentUserId }) => {
           {post.content}
         </p>
       </div>
-
-      <div className="mt-auto pt-4">
-        <button className="w-full cursor-pointer py-3 border border-black text-[10px] font-black uppercase tracking-[0.3em] hover:bg-black hover:text-white transition-colors">
-          Read Full Entry
-        </button>
-      </div>
-    </article>
+    </div>
   );
 };
 

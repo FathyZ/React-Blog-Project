@@ -2,24 +2,28 @@ import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Widget } from "@uploadcare/react-widget";
+import { useEffect } from "react";
 
 const postSchema = z.object({
   title: z.string().min(5, "Title must be at least 5 characters"),
-  content: z.string().min(20, "Content must be at least 20 characters"),
+  content: z.string().min(10, "Content must be at least 10 characters"),
   imageUrl: z.string().url("Please enter a valid image URL").or(z.literal("")),
 });
 
-const PostForm = ({ onSubmit, initialData = null }) => {
+const PostForm = ({ onSubmit, mode, initialData = null }) => {
   const {
     register,
     handleSubmit,
     setValue,
-
+    reset,
     formState: { errors, isSubmitting },
   } = useForm({
     resolver: zodResolver(postSchema),
-    defaultValues: initialData || { title: "", content: "", imageUrl: "" },
+    defaultValues: { title: "", content: "", imageUrl: "" },
   });
+  useEffect(() => {
+    reset(initialData || { title: "", content: "", imageUrl: "" });
+  }, [initialData, reset]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-10">
@@ -82,7 +86,8 @@ const PostForm = ({ onSubmit, initialData = null }) => {
         disabled={isSubmitting}
         className="w-full bg-black cursor-pointer text-white py-5 font-black uppercase tracking-[0.4em] text-xs hover:bg-zinc-800 transition-all disabled:bg-gray-300"
       >
-        {isSubmitting ? "PUBLISHING..." : "PUBLISH POST"}
+        {mode === "edit" ? "UPDATE POST" : "PUBLISH POST"}
+        {isSubmitting ? "PUBLISHING..." : ""}
       </button>
     </form>
   );
