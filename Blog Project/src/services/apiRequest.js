@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https://react-blog-project-production.up.railway.app';
 
 export const apiRequest = async (endpoint, options = {}) => {
   const token = localStorage.getItem('token');

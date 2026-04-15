@@ -5,6 +5,7 @@ const path = require('path');
 const app = jsonServer.create();
 const router = jsonServer.router(path.join(__dirname, 'db.json'));
 const middlewares = jsonServer.defaults();
+const port = process.env.PORT || 3000;
 
 app.db = router.db;
 
@@ -14,6 +15,6 @@ app.use(auth);
 
 app.use(router);
 
-app.listen(3000, () => {
-  console.log('JSON Server with Auth is running on http://localhost:3000');
+app.listen(port, () => {
+  console.log(`JSON Server is running on port ${port}`);
 });
