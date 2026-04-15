@@ -7,6 +7,8 @@ const router = jsonServer.router(path.join(__dirname, 'db.json'));
 const middlewares = jsonServer.defaults();
 const port = process.env.PORT || 3000;
 
+app.use(cors());
+
 app.db = router.db;
 
 app.use(middlewares);
