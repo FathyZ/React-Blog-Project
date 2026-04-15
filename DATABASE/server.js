@@ -3,10 +3,12 @@ const cors = require('cors');
 const server = jsonServer.create();
 const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
+const auth = require('json-server-auth'); 
 
 server.use(cors()); 
 
 server.use(middlewares);
+server.use(auth);
 
 server.use(router);
 
