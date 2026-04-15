@@ -10,7 +10,7 @@ const PostCard = ({ post, onDelete, currentUserId }) => {
           <img
             src={post.imageUrl}
             alt={post.title}
-            className="w-full h-full object-cover grayscale"
+            className="w-full h-full object-cover "
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gray-50 text-gray-300 font-mono text-[10px] uppercase tracking-tighter">

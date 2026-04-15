@@ -11,12 +11,18 @@
       "password": "$2a$10$66Wd.KKcAuUyBY8s5r2UhO8N6I9ckyXHCn1VXtwFlXvgP7eCPE6jK",
       "username": "Mahmoud",
       "id": 2
+    },
+    {
+      "email": "hamada@gmail.com",
+      "password": "$2a$10$rKLB0GG9qO1e9FNt0Lu/5eb.VioCG21Etho1GALO5ZcH5c7narfaW",
+      "username": "HamadaZ@Z",
+      "id": 3
     }
   ],
   "posts": [
     {
       "title": "Testing the react toasts",
-      "content": "Toasts Will work...?",
+      "content": "HMMMMMMMMM?",
       "imageUrl": "https://466xu6em55.ucarecd.net/905657aa-04c8-4e9a-a2f8-d476c571d527/",
       "userId": 1,
       "author": "FathyZ",
@@ -31,6 +37,15 @@
       "author": "FathyZ",
       "createdAt": "2026-04-14T17:43:52.121Z",
       "id": 3
+    },
+    {
+      "title": "I am hamada !",
+      "content": "Hello I am hamada im really excited for this blog to work :D",
+      "imageUrl": "",
+      "userId": 3,
+      "author": "HamadaZ@Z",
+      "createdAt": "2026-04-15T01:08:27.931Z",
+      "id": 4
     }
   ]
 }

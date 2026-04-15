@@ -20,14 +20,16 @@ const Home = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-20 relative">
-      <Link to="/edit-post">
-        <div className="z-50 fixed h-16 flex items-center justify-center aspect-square rounded-full bg-black right-12 bottom-12 text-3xl text-white hover:bg-gray-500 cursor-pointer transition-colors duration-200">
-          +
-        </div>
-      </Link>
+      {user && (
+        <Link to="/edit-post">
+          <div className="z-50 fixed h-16 flex items-center justify-center aspect-square rounded-full bg-black right-12 bottom-12 text-3xl text-white hover:bg-gray-500 cursor-pointer transition-colors duration-200">
+            +
+          </div>
+        </Link>
+      )}
       <header className="mb-20 border-b-8 border-black pb-10">
         <h1 className="text-8xl font-black uppercase tracking-tighter leading-none">
-          Home <br /> Feed
+          Home Feed
         </h1>
         <p className="mt-6 font-mono text-sm uppercase tracking-widest text-gray-400">
           {posts.length} Posts Available to read
